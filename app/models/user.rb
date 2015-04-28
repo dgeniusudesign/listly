@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
+  mount_uploader :avatar, AvatarUploader
+
   has_many :lists
   has_many :authentications
 
@@ -13,8 +15,7 @@ class User < ActiveRecord::Base
       registered_user.update_attribute(:remote_avatar_url, auth.info.image.gsub('http://','https://'))
       return registered_user
     else
-      user = User.new(name: auth.info.name, email: auth.info.email, password: Devise.friendly_token[0,20], remote_avatar_url: auth.info.image.gsub('http://','https://'),
-                      has_random_password: true)
+      user = User.new(name: auth.info.name, email: auth.info.email, password: Devise.friendly_token[0,20], remote_avatar_url: auth.info.image.gsub('http://','https://'))
       user.save
       return user
     end
