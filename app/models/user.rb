@@ -9,6 +9,9 @@ class User < ActiveRecord::Base
   has_many :lists
   has_many :authentications
 
+  extend FriendlyId
+  friendly_id :name, use: [:slugged, :finders]
+
   def self.find_for_oauth(auth)
     registered_user = User.where(:email => auth.info.email).first
     if registered_user

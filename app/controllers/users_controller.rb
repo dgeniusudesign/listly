@@ -1,5 +1,11 @@
 class UsersController < ApplicationController
+
   before_action :set_user
+  before_action :check_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:set_password, :update_password]
+
+  def show
+  end
 
   def update
     @user.update(user_params)
@@ -31,6 +37,6 @@ class UsersController < ApplicationController
   end
 
   def set_user
-    @user = User.find(params[:id])
+    @user = User.friendly.find(params[:id])
   end
 end
