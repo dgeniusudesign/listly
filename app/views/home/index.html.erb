@@ -1,7 +1,6 @@
 <h4>Lists</h4>
 <ul>
   <% @lists.each do |list| %>
-    <li><%= list.name %></li>
-    <li><%= list.items_count %></li>
+    <li><%= list.name %> (<%= list.items_count %>)</li>
   <% end %>
 </ul>

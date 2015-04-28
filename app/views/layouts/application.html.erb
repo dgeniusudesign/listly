@@ -21,5 +21,6 @@
     <% end %>
     <%= render 'partials/navbar' %>
     <%= yield %>
+    <%= render 'partials/create_list_modal' if user_signed_in? %>
   </body>
 </html>
