@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   mount_uploader :avatar, AvatarUploader
 
   has_many :lists
+  has_many :items
   has_many :authentications
 
   extend FriendlyId

@@ -14,7 +14,9 @@ Rails.application.routes.draw do
     root 'static_pages#index'
   end
 
-  resources :lists
+  resources :lists do
+    resources :items
+  end
   resources :users do
     member do
       get 'set_password', as: :set_password
