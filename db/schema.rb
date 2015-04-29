@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150429034859) do
+ActiveRecord::Schema.define(version: 20150429060914) do
 
   create_table "authentications", force: :cascade do |t|
     t.string   "uid"
@@ -58,6 +58,13 @@ ActiveRecord::Schema.define(version: 20150429034859) do
 
   add_index "items", ["list_id"], name: "index_items_on_list_id"
   add_index "items", ["user_id"], name: "index_items_on_user_id"
+
+  create_table "list_authorizations", force: :cascade do |t|
+    t.integer  "share_list_id"
+    t.integer  "share_user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "lists", force: :cascade do |t|
     t.string   "name",                    null: false
