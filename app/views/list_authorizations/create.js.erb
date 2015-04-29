@@ -1,0 +1,6 @@
+<% if @list_auth.save %>
+  $("#share-user-modal").modal('hide');
+  alertify.success("shared list to user");
+<% else %>
+  alertify.error('');
+<% end %>

@@ -25,6 +25,9 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  resources :list_authorizations, only: [:create, :destroy]
+
   resources :users do
     member do
       get 'set_password', as: :set_password

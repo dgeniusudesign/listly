@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
   has_many :list_authorizations, foreign_key: 'share_user_id'
   has_many :share_lists, class_name: "List", through: :list_authorizations
 
+  validates_presence_of :name
+
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]
 

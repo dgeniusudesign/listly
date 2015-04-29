@@ -10,6 +10,7 @@
     </div>
   </div>
 </div>
+<a class="btn btn-success" href="#" data-toggle="modal" data-target="#share-user-modal">Share</a>
 <h5>Comments</h4>
 <%= form_tag list_comments_path(@list), method: :post, remote: true do %>
   <div class="form-group">
@@ -24,3 +25,4 @@
     <%= render comment %>
   <% end %>
 </ul>
+<%= render 'partials/share_user_modal' %>
