@@ -1,5 +1,5 @@
 body {
-  padding: 65px;
+  padding-top: 65px;
   font-family: 'Lato';
 }
 
@@ -113,10 +113,48 @@ footer {
 }
 
 footer > p {
-  padding: 30px;
+  padding: 20px;
   margin: 20px 0 0 0;
 }
 
 .btn {
   border-radius: 0;
+}
+
+.btn-link {
+  background-color: #453535;
+}
+
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -60px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 60px; 
+}
+
+.edit-btn {
+  background-color: #1d9d74;
+  border: none;
+  color: white;
+}
+
+.add-item {
+  border-radius: 0;
+  border: none;
+}
+
+.add-btn {
+  padding: 7px 12px;
 }

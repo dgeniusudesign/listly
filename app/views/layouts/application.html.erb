@@ -7,20 +7,25 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <% unless notice.blank? %>
-      <div class="alert alert-info alert-dismissable alert-fixed">
+    <div class="page-wrap">
+      <% unless notice.blank? %>
+      <div class="alert alert-info alert-dismissable alert-fixed text-center">
         <%= notice %>
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
       </div>
-    <% end %>
-    <% unless alert.blank? %>
-      <div class="alert alert-danger alert-dismissable alert-fixed">
-        <%= alert %>
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      </div>
-    <% end %>
-    <%= render 'partials/navbar' %>
-    <%= yield %>
-    <%= render 'partials/create_list_modal' if user_signed_in? %>
+      <% end %>
+      <% unless alert.blank? %>
+        <div class="alert alert-danger alert-dismissable alert-fixed text-center">
+          <%= alert %>
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        </div>
+      <% end %>
+      <%= render 'partials/navbar' %>
+      <%= yield %>
+      <%= render 'partials/create_list_modal' if user_signed_in? %>
+    </div>
+    <footer class="main-background text-center site-footer">
+      <p>2015. Copyrights Reserved</p>
+    </footer>
   </body>
 </html>

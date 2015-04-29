@@ -1,7 +1,7 @@
 class ListsController < ApplicationController
 
   before_action :authenticate_user!
-  before_action :is_list_viewable
+  before_action :is_list_viewable, only: [:show, :edit, :cancel_edit, :update, :destroy]
   before_action :set_list, only: [:show, :edit, :cancel_edit, :update, :destroy]
 
   def show
