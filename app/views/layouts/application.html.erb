@@ -9,15 +9,27 @@
   <body>
     <div class="page-wrap">
       <% unless notice.blank? %>
-      <div class="alert alert-info alert-dismissable alert-fixed text-center">
-        <%= notice %>
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+              <div class="alert alert-info alert-dismissable alert-fixed text-center">
+                <%= notice %>
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              </div>
+            </div>
+          </div>
+        </div>
       <% end %>
       <% unless alert.blank? %>
-        <div class="alert alert-danger alert-dismissable alert-fixed text-center">
-          <%= alert %>
-          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+              <div class="alert alert-danger alert-dismissable alert-fixed text-center">
+                <%= alert %>
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              </div>
+            </div>
+          </div>
         </div>
       <% end %>
       <%= render 'partials/navbar' %>

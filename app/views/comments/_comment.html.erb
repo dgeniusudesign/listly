@@ -1,7 +1,9 @@
-<li id="comment-<%= comment.id %>">
-  <%= comment.user.name %> <br>
-  <%= comment.content %>
+<li id="comment-<%= comment.id %>" class="comments">
+  <i class="fa fa-user fa-lg"></i>  <%= comment.user.name %> <br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-comments-o fa-lg"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <%= comment.content %>
   <% if comment.user == current_user %>
-    <%= link_to 'delete', list_comment_path(comment.list, comment), method: :delete, remote: true %>
+    <%= link_to list_comment_path(comment.list, comment), method: :delete, remote: true, class: 'btn btn-danger btn-xs del-btn comment-del' do %>
+        <i class="fa fa-trash-o fa-lg"></i>
+      <% end %>
   <% end %>
 </li>

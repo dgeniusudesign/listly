@@ -1,7 +1,13 @@
 <li id="item-<%= item.id %>">
-  <div class="item-name">
+  <div class="item-name list-item">
     <%= item.name %>
+    <div class="btn-contain">
+      <%= link_to edit_list_item_path(item.list_id, item), remote: true, class: 'btn btn-default btn-xs edit-btn' do %>
+         <i class="fa fa-pencil fa-lg"></i>
+      <% end %>
+      <%= link_to list_item_path(item.list_id, item), method: :delete, remote: true,  class: 'btn btn-danger btn-xs del-btn' do %>
+        <i class="fa fa-trash-o fa-lg"></i>
+      <% end %>
+    </div>
   </div>
-  <%= link_to 'edit', edit_list_item_path(item.list_id, item), remote: true %>
-  <%= link_to 'delete', list_item_path(item.list_id, item), method: :delete, remote: true %>
 </li>

@@ -1,9 +1,9 @@
-<%= form_for([@list, @item], remote: true) do |f| %>
+<%= form_for([@list, @item], remote: true, class: 'form-inline') do |f| %>
   <div class="form-group">
     <%= f.text_field :name, class: 'form-control', placeholder: 'Name' %>
   </div>
   <div class="form-group">
-    <%= f.submit :update, class: 'btn btn-success' %>
-    <%= link_to 'cancel', cancel_edit_list_item_path(@list, @item), remote: true, class: 'btn btn-primary' %>
+    <%= f.submit :Update, class: 'btn btn-success btn-without-border' %>
+    <%= link_to 'Cancel', cancel_edit_list_item_path(@list, @item), remote: true, class: 'btn btn-primary btn-without-border' %>
   </div>
 <% end %>

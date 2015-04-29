@@ -45,10 +45,12 @@ body {
   margin: 15px;
   width: 30.7%;
   background-color: hsla(0, 0%, 85%, 0.53);
+  height: 360px;
 }
 
 .grid-list > ul > li,  #list-display > ul > li {
   list-style: none;
+  padding-left: 30px;
   color: white;
 }
 
@@ -150,6 +152,10 @@ html, body {
   color: white;
 }
 
+.del-btn {
+  border: none;
+}
+
 .add-item {
   border-radius: 0;
   border: none;
@@ -157,4 +163,37 @@ html, body {
 
 .add-btn {
   padding: 7px 12px;
+}
+
+.add-item-form {
+  padding: 30px;
+}
+
+.list-item {
+  font-size: 18px;
+}
+
+.btn-contain, .comment-del {
+  float: right;
+}
+
+.share-comment-section {
+  padding: 20px;
+}
+
+.comments {
+  list-style: none;
+}
+
+.alert {
+  border-radius: 0;
+  border: none;
+}
+
+.modal-content, .form-control {
+  border-radius: 0;
+}
+
+.btn-without-border {
+  border: none;
 }

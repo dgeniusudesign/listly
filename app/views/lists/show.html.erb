@@ -10,19 +10,27 @@
     </div>
   </div>
 </div>
-<a class="btn btn-success" href="#" data-toggle="modal" data-target="#share-user-modal">Share</a>
-<h5>Comments</h4>
-<%= form_tag list_comments_path(@list), method: :post, remote: true do %>
-  <div class="form-group">
-    <%= text_field_tag 'comment[content]', nil, class: 'form-control', placeholder: 'Comment' %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <div class="text-center share-comment-section">
+        <a class="btn btn-success" href="#" data-toggle="modal" data-target="#share-user-modal">Share</a>
+        <h5>Comments</h4>
+      </div>
+        <%= form_tag list_comments_path(@list), method: :post, remote: true do %>
+          <div class="form-group">
+            <%= text_field_tag 'comment[content]', nil, class: 'form-control', placeholder: 'Comment' %>
+          </div>
+          <div class="form-group text-center">
+            <%= submit_tag 'Submit', class: 'btn btn-success' %>
+          </div>
+        <% end %>
+        <ul id="list-<%= @list.id %>-comments">
+          <% @comments.each do |comment| %>
+            <%= render comment %>
+          <% end %>
+        </ul>
+        <%= render 'partials/share_user_modal' %>
+    </div>
   </div>
-  <div class="form-group">
-    <%= submit_tag 'Submit', class: 'btn btn-success' %>
-  </div>
-<% end %>
-<ul id="list-<%= @list.id %>-comments">
-  <% @comments.each do |comment| %>
-    <%= render comment %>
-  <% end %>
-</ul>
-<%= render 'partials/share_user_modal' %>
+</div>
