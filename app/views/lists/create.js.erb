@@ -2,5 +2,6 @@
   $('#create-list-modal').modal('hide');
   $('#list_name').val('');
   $('#lists').prepend('<%=j render(@list) %>');
+  alertify.success('created list');
 <% else %>
 <% end %>

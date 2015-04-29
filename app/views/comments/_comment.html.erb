@@ -1,4 +1,7 @@
-<li>
+<li id="comment-<%= comment.id %>">
   <%= comment.user.name %> <br>
   <%= comment.content %>
+  <% if comment.user == current_user %>
+    <%= link_to 'delete', list_comment_path(comment.list, comment), method: :delete, remote: true %>
+  <% end %>
 </li>

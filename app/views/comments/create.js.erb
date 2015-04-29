@@ -1,4 +1,5 @@
 <% if @comment.save %>
+  $('#comment_content').val('');
   $("#list-<%= @comment.list_id %>-comments").prepend('<%=j render @comment %>');
 <% else %>
 <% end %>
