@@ -4,6 +4,8 @@
   </div>
   <div class="form-group">
     <%= f.submit :Update, class: 'btn btn-success btn-without-border' %>
-    <%= link_to 'Cancel', cancel_edit_list_path(@list), remote: true, class: 'btn btn-primary btn-without-border' %>
+    <%= link_to cancel_edit_list_path(@list), remote: true, class: 'btn btn-danger btn-without-border' do %>
+        <i class="fa fa-times fa-lg"></i>
+      <% end %>
   </div>
 <% end %>

@@ -1,6 +1,6 @@
 <% if @item.persisted? %>
   $('#item_name').val('');
   $("#list-<%= @item.list_id %>-items").prepend('<%=j render(@item) %>');
-  alertify.success('created item');
+  alertify.success('Created new item');
 <% else %>
 <% end %>
