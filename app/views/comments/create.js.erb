@@ -1,0 +1,4 @@
+<% if @comment.save %>
+  $("#list-<%= @comment.list_id %>-comments").prepend('<%=j render @comment %>');
+<% else %>
+<% end %>

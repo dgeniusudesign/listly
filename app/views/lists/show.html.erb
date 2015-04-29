@@ -6,3 +6,17 @@
 <% @items.each do |item| %>
   <%= render item %>
 <% end %>
+<h5>Comments</h4>
+<%= form_tag list_comments_path(@list), method: :post, remote: true do %>
+  <div class="form-group">
+    <%= text_field_tag 'comment[content]', nil, class: 'form-control', placeholder: 'Comment' %>
+  </div>
+  <div class="form-group">
+    <%= submit_tag 'Submit', class: 'btn btn-success' %>
+  </div>
+<% end %>
+<ul id="list-<%= @list.id %>-comments">
+  <% @comments.each do |comment| %>
+    <%= render comment %>
+  <% end %>
+</ul>

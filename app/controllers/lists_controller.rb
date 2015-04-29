@@ -5,6 +5,7 @@ class ListsController < ApplicationController
 
   def show
     @items = @list.items.all
+    @comments = @list.comments.all
   end
 
   # POST /lists

@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   end
 
   resources :lists do
+    resources :comments
     resources :items
   end
   resources :users do

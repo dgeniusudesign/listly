@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150429034150) do
+ActiveRecord::Schema.define(version: 20150429034859) do
 
   create_table "authentications", force: :cascade do |t|
     t.string   "uid"
@@ -27,8 +27,9 @@ ActiveRecord::Schema.define(version: 20150429034150) do
   create_table "comments", force: :cascade do |t|
     t.integer  "list_id"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "content",    default: "", null: false
   end
 
   add_index "comments", ["list_id"], name: "index_comments_on_list_id"
