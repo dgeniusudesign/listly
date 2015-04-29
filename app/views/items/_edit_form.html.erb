@@ -4,5 +4,6 @@
   </div>
   <div class="form-group">
     <%= f.submit :update, class: 'btn btn-success' %>
+    <%= link_to 'cancel', cancel_edit_list_item_path(@list, @item), remote: true, class: 'btn btn-primary' %>
   </div>
 <% end %>

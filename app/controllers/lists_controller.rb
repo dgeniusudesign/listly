@@ -1,7 +1,7 @@
 class ListsController < ApplicationController
 
   before_action :authenticate_user!
-  before_action :set_list, only: [:show, :edit, :update, :destroy]
+  before_action :set_list, only: [:show, :edit, :cancel_edit, :update, :destroy]
 
   def show
     @items = @list.items.all
@@ -27,6 +27,12 @@ class ListsController < ApplicationController
   end
 
   def edit
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def cancel_edit
     respond_to do |format|
       format.js
     end

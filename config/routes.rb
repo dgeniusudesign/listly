@@ -15,8 +15,15 @@ Rails.application.routes.draw do
   end
 
   resources :lists do
+    member do
+      get 'cancel_edit', as: :cancel_edit
+    end
     resources :comments
-    resources :items
+    resources :items do
+      member do
+        get 'cancel_edit', as: :cancel_edit
+      end
+    end
   end
   resources :users do
     member do

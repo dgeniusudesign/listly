@@ -21,6 +21,14 @@ class ItemsController < ApplicationController
     end
   end
 
+  def cancel_edit
+    @list = List.find(params[:list_id])
+    @item = Item.find(params[:id])
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def update
     @item = Item.find(params[:id])
     respond_to do |format|
