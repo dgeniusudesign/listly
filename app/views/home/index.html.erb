@@ -5,4 +5,10 @@
       <%= render list %>
     <% end %>
   </div>
+  <p class="lead main-list-head">Shared Lists</p>
+  <div class="row" id="my-own-lists">
+    <% @shared_lists.each do |list| %>
+      <%= render list %>
+    <% end %>
+  </div>
 </div>

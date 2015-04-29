@@ -14,4 +14,14 @@ class ApplicationController < ActionController::Base
     sign_in(resource)
     root_path
   end
+
+  def is_list_viewable
+    list_id = params[:id]
+    if current_user.share_lists.find_by_id(list_id) || current_user.lists.find_by_id(list_id)
+      true
+    else
+      redirect_to root_path, notice: "You are not allowed to view this list"
+    end
+  end
+
 end
