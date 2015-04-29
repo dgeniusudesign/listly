@@ -1,11 +1,15 @@
-<p id="notice"><%= notice %></p>
-<p>
-  <strong>Name:</strong>
-  <%= @list.name %>
-</p>
-<% @items.each do |item| %>
-  <%= render item %>
-<% end %>
+<div class="container main-background" id="second-part">
+  <p class="lead main-list-head"><%= @list.name %></p>
+  <div class="row">
+    <div class="col-sm-6 col-md-6 col-lg-6 col-sm-offset-3 col-md-offset-3 col-lg-offset-3" id="list-display">
+      <ul id="list-<%= @list.id %>-items">
+        <% @items.each do |item| %>
+          <%= render item %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
 <h5>Comments</h4>
 <%= form_tag list_comments_path(@list), method: :post, remote: true do %>
   <div class="form-group">

@@ -35,3 +35,88 @@ body {
 .navbar-nav > li > a {
   font-size: 1.35rem !important;
 }
+
+#my-own-lists, #shared-lists {
+  color: white;
+}
+
+.grid-list {
+  padding: 0;
+  margin: 15px;
+  width: 30.7%;
+  background-color: hsla(0, 0%, 85%, 0.53);
+}
+
+.grid-list > ul > li,  #list-display > ul > li {
+  list-style: none;
+  color: white;
+}
+
+.grid-list > ul, #list-display > ul {
+  padding: 10px 30px;
+}
+
+.main-background {
+  background: #796ded; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  hsla(246,78%,68%,1) 0%, hsla(266,58%,69%,1) 50%, hsla(291,51%,66%,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,hsla(246,78%,68%,1)), color-stop(50%,hsla(266,58%,69%,1)), color-stop(100%,hsla(291,51%,66%,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg,  hsla(246,78%,68%,1) 0%,hsla(266,58%,69%,1) 50%,hsla(291,51%,66%,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg,  hsla(246,78%,68%,1) 0%,hsla(266,58%,69%,1) 50%,hsla(291,51%,66%,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg,  hsla(246,78%,68%,1) 0%,hsla(266,58%,69%,1) 50%,hsla(291,51%,66%,1) 100%); /* IE10+ */
+  background: linear-gradient(135deg,  hsla(246,78%,68%,1) 0%,hsla(266,58%,69%,1) 50%,hsla(291,51%,66%,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#796ded', endColorstr='#c77cd4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.main-list-head, .list-head {
+  color: white;
+  padding: 10px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.list-head {
+  padding: 10px;
+}
+
+#list-display {
+  padding: 0;
+  background-color: hsla(0, 0%, 85%, 0.53);
+}
+
+#second-part {
+  padding-bottom: 20px;
+}
+
+h3 {
+  margin-left: 60px;
+}
+
+.btn-facebook {
+  background-color: #3B5998;
+}
+
+.btn-googleplus {
+  background-color: #DD4B39;
+}
+
+.btn-facebook, .btn-googleplus {
+  color: white;
+  border-radius: 0;
+}
+
+.btn-group-s {
+  margin-bottom: 30px;
+}
+
+footer {
+  color: white;
+}
+
+footer > p {
+  padding: 30px;
+  margin: 20px 0 0 0;
+}
+
+.btn {
+  border-radius: 0;
+}

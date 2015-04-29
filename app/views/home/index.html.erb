@@ -1,6 +1,8 @@
-<h4>Lists</h4>
-<ul id="lists">
-  <% @lists.each do |list| %>
-    <%= render list %>
-  <% end %>
-</ul>
+<div class="container main-background">
+  <p class="lead main-list-head">My Own Lists</p>
+  <div class="row" id="my-own-lists">
+    <% @lists.each do |list| %>
+      <%= render list %>
+    <% end %>
+  </div>
+</div>
