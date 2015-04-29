@@ -17,6 +17,11 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+    @item = Item.find(params[:id])
+    @item_id = @item.id
+    respond_to do |format|
+      format.js
+    end
   end
 
   private

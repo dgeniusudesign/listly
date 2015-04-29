@@ -1,0 +1,4 @@
+<li id="item-<%= item.id %>">
+  <%= item.name %>
+  <%= link_to 'delete', list_item_path(item.list_id, item), method: :delete, remote: true %>
+</li>

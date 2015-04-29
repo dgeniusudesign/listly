@@ -1,4 +1,6 @@
 <% if @list.persisted? %>
-  $('#create-list-modal').modal('hide')
+  $('#create-list-modal').modal('hide');
+  $('#list_name').val('');
+  $('#lists').prepend('<%=j render(@list) %>');
 <% else %>
 <% end %>

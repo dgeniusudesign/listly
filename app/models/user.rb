@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   has_many :lists
   has_many :items
   has_many :authentications
+  has_many :comments
 
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]

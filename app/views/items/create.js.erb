@@ -1,4 +1,5 @@
 <% if @item.persisted? %>
-  console.log("item created");
+  $('#item_name').val('');
+  $("#list-<%= @item.list_id %>-items").prepend('<%=j render(@item) %>');
 <% else %>
 <% end %>

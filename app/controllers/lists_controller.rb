@@ -4,6 +4,7 @@ class ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :update, :destroy]
 
   def show
+    @items = @list.items.all
   end
 
   # POST /lists
@@ -24,6 +25,12 @@ class ListsController < ApplicationController
     end
   end
 
+  def edit
+    respond_to do |format|
+      format.js
+    end
+  end
+
   # PATCH/PUT /lists/1
   # PATCH/PUT /lists/1.json
   def update
@@ -41,11 +48,9 @@ class ListsController < ApplicationController
   # DELETE /lists/1
   # DELETE /lists/1.json
   def destroy
-    @list.destroy
+    @list_id = @list.id
     respond_to do |format|
-      format.html { redirect_to lists_url, notice: 'List was successfully destroyed.' }
       format.js
-      format.json { head :no_content }
     end
   end
 
