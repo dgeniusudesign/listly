@@ -1,5 +1,7 @@
 <li id="list-<%= list.id %>">
-  <%= list.name %> <%= list.items_count %>
+  <div class="list-name">
+    <%= list.name %> (<%= list.items_count %>)
+  </div>
   <%= link_to 'show', list_path(list) %>
   <%= link_to 'edit', edit_list_path(list), remote: true %>
   <%= link_to 'delete', list_path(list), method: :delete, remote: true %>

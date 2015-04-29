@@ -1,4 +1,7 @@
 <li id="item-<%= item.id %>">
-  <%= item.name %>
+  <div class="item-name">
+    <%= item.name %>
+  </div>
+  <%= link_to 'edit', edit_list_item_path(item.list_id, item), remote: true %>
   <%= link_to 'delete', list_item_path(item.list_id, item), method: :delete, remote: true %>
 </li>

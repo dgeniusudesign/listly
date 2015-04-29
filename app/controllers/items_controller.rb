@@ -13,7 +13,20 @@ class ItemsController < ApplicationController
     end
   end
 
+  def edit
+    @list = List.find(params[:list_id])
+    @item = Item.find(params[:id])
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def update
+    @item = Item.find(params[:id])
+    respond_to do |format|
+      @item.update(item_params)
+      format.js
+    end
   end
 
   def destroy

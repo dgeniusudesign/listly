@@ -1,0 +1,5 @@
+<% if @list.persisted? %>  
+  $('#list_name').val('');
+  $("#list-<%= @list.id %> .list-name").html("<%= @list.name %>");
+<% else %>
+<% end %>

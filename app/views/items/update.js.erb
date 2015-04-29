@@ -1,0 +1,4 @@
+<% if @item.persisted? %>
+  $("#item-<%= @item.id %> .item-name").html("<%= @item.name %>");
+<% else %>
+<% end %>
