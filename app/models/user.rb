@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
 
   mount_uploader :avatar, AvatarUploader
 
+  before_save :generate_user_token
+
   has_many :lists
   has_many :items
   has_many :authentications
@@ -28,6 +30,12 @@ class User < ActiveRecord::Base
       user.save
       return user
     end
+  end
+
+  def generate_user_token
+    begin
+      self[:auth_token] = SecureRandom.hex
+    end while User.exists?(auth_token: self[:auth_token])
   end
 
 end

@@ -3,7 +3,7 @@
     <span class="item-name"><%= item.name %></span>
     <div class="btn-contain">
       <%= link_to edit_list_item_path(item.list_id, item), remote: true, class: 'btn btn-default btn-xs edit-btn' do %>
-         <i class="fa fa-pencil fa-lg"></i>
+        <i class="fa fa-pencil fa-lg"></i>
       <% end %>
       <%= link_to list_item_path(item.list_id, item), method: :delete, remote: true,  class: 'btn btn-danger btn-xs del-btn' do %>
         <i class="fa fa-trash-o fa-lg"></i>

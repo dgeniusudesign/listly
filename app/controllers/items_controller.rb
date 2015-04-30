@@ -32,7 +32,11 @@ class ItemsController < ApplicationController
   def update
     @item = Item.find(params[:id])
     respond_to do |format|
-      @item.update(item_params)
+      if @item.update(item_params)
+        @updated = true
+      else
+        @updated = false
+      end
       format.js
     end
   end

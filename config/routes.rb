@@ -35,6 +35,12 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :services do
+    resources :auth, only: [:create, :destroy]
+    resources :lists, only: [:create, :index, :show]
+    resources :items, only: [:index, :create, :show]
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
