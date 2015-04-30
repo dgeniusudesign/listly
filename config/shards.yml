@@ -1,0 +1,20 @@
+octopus:
+  replicated: true
+  octopus_enviroments:
+    - production
+  production:
+    shards:
+      slave1:
+        adapter: postgresql
+        encoding: unicode
+        host: localhost
+        username: monishkumar
+        password: 123456
+        database: listtdb_replication_1
+      slave2:
+        adapter: postgresql
+        host: localhost
+        encoding: unicode
+        username: monishkumar
+        password: 123456
+        database: listtdb_replication_2
