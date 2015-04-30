@@ -58,6 +58,7 @@ gem 'active_model_serializers'
 gem 'dalli'
 
 gem 'ar-octopus'
+gem 'rack-ssl-enforcer'
 
 group :development do
   gem 'sqlite3'
