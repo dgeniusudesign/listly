@@ -5,6 +5,7 @@ class ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :cancel_edit, :update, :destroy]
 
   def show
+    expires_in 5.minutes
     @items = @list.items.all
     @comments = @list.comments.all
   end
