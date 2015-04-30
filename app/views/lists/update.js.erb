@@ -1,5 +1,7 @@
-<% if @list.persisted? %>  
+<% if @updated %>  
   $('#list_name').val('');
   $("#list-<%= @list.id %> .list-name").html("<%= @list.name %>");
+  alertify.success('List updated successfully');
 <% else %>
+  alertify.error("<%= @list.errors.full_messages.first %>");
 <% end %>

@@ -1,4 +1,5 @@
 <% if @item.destroy %>
   $("#item-<%= @item_id %>").remove();
 <% else %>
+  alertify.error("Couldn't destroy item at the moment");
 <% end %>

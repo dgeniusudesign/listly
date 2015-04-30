@@ -1,4 +1,6 @@
-<% if @item.persisted? %>
+<% if @updated %>
   $("#item-<%= @item.id %> .item-name").html("<%= @item.name %>");
+  alertify.success('Item updated successfully');
 <% else %>
+  alertify.error("<%= @item.errors.full_messages.first %>");
 <% end %>

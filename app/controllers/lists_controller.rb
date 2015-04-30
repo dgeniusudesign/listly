@@ -44,14 +44,11 @@ class ListsController < ApplicationController
   def update
     respond_to do |format|
       if @list.update(list_params)
-        format.html { redirect_to @list, notice: 'List was successfully updated.' }
-        format.js
-        format.json { render :show, status: :ok, location: @list }
+        @updated = true
       else
-        format.html { render :edit }
-        format.js
-        format.json { render json: @list.errors, status: :unprocessable_entity }
+        @updated = false
       end
+      format.js
     end
   end
 

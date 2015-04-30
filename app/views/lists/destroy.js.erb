@@ -1,4 +1,5 @@
 <% if @list.destroy %>
   $("#list-<%= @list_id %>").remove();
 <% else %>
+  alertify.error("Couldn't destroy list at the moment");
 <% end %>

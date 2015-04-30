@@ -3,4 +3,5 @@
   $("#list-<%= @item.list_id %>-items").prepend('<%=j render(@item) %>');
   alertify.success('Created new item');
 <% else %>
+  alertify.error("<%= @item.errors.full_messages.first %>");
 <% end %>

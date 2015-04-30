@@ -59,6 +59,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'active_model_serializers'
+gem 'dalli'
 
 group :development do
   gem 'sqlite3'
