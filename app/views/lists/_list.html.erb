@@ -4,7 +4,7 @@
   </p>
   <p class="text-center">
     <%= link_to edit_list_path(list), remote: true, class: 'btn btn-default btn-sm edit-btn' do %>
-       <i class="fa fa-pencil fa-lg"></i>
+      <i class="fa fa-pencil fa-lg"></i>
     <% end %>
     <%= link_to list_path(list), method: :delete, remote: true, class: 'btn btn-danger btn-sm del-btn' do %>
       <i class="fa fa-trash-o fa-lg"></i>
@@ -18,7 +18,7 @@
   <div class="text-center">
     <%= link_to list_path(list), class: 'btn btn-default btn-sm edit-btn' do %>
       <i class="fa fa-angle-double-right fa-lg"></i> More 
-    <% end %> 
+    <% end %>
   </div>
-  <%= render 'items/form' %>
+  <%= render 'items/form', list: list %>
 </div>

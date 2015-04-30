@@ -17,8 +17,6 @@ class User < ActiveRecord::Base
 
   validates_presence_of :name
 
-  replicated_model()
-
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]
 
