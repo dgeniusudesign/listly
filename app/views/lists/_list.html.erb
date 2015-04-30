@@ -20,11 +20,5 @@
       <i class="fa fa-angle-double-right fa-lg"></i> More 
     <% end %> 
   </div>
-  <%= form_tag list_items_path(list), remote: true, class: 'form-inline text-center add-item-form' do %>
-    <div class="form-group">
-      <%= text_field_tag 'item[name]', nil, class: 'form-control add-item', placeholder: 'Item name' %>
-    </div>
-    <%= button_tag '<i class="fa fa-plus fa-lg"></i> Add'.html_safe, class: 'btn btn-default add-btn edit-btn' %>
-    
-  <% end %>
+  <%= render 'items/form' %>
 </div>
