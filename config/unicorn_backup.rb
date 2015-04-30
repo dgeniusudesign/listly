@@ -1,4 +1,4 @@
-root = "/home/sudharsanan/Projects/listly"
+root = "/Users/monishkumar/Projects/RailsProjects/listly"
 working_directory root
 pid "#{root}/tmp/pids/unicorn_backup.pid"
 stderr_path "#{root}/log/unicorn_backup.err.log"
